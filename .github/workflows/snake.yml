@@ -25,10 +25,10 @@ jobs:
         with:
           github_user_name: an0other
           outputs: |
-            # Bản sáng: Dải màu xanh lá cây Pastel (dịu mắt, không bị rực)
-            dist/github-contribution-grid-snake.svg?color_snake=#1da1f2&color_dots=#f0f2f5,#c6e48b,#7bc96f,#239a3b,#196127
-            # Bản tối: Dải màu Xám xanh hiện đại (kiểu giao diện VS Code)
-            dist/github-contribution-grid-snake-dark.svg?color_snake=#e99149&color_dots=#161b22,#2d333b,#404c5a,#768390,#adbac7
+            # Bản sáng: Hệ xanh lá tươi sáng truyền thống
+            dist/github-contribution-grid-snake.svg?color_snake=#4da6ff&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
+            # Bản tối: Hệ xanh lục bảo rực rỡ (Khắc phục tình trạng xám đen)
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#ffcc00&color_dots=#161b22,#00441b,#006d2c,#238b45,#41ab5d
 
       - name: Deploy to output branch
         uses: peaceiris/actions-gh-pages@v4
