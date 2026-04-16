@@ -2,7 +2,7 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * 0"
+    - cron: "0 17 * * 6"
   workflow_dispatch:
   push:
     branches:
@@ -25,10 +25,10 @@ jobs:
         with:
           github_user_name: an0other
           outputs: |
-            # Bản sáng: Rắn xanh dương, các ô màu xanh băng dịu
-            dist/github-contribution-grid-snake.svg?color_snake=#3c7dd9&color_dots=#ebedf0,#c0e2f8,#81c1ea,#41a0dc,#076196
-            # Bản tối: Rắn vàng hổ phách, các ô màu xám than tối giản
-            dist/github-contribution-grid-snake-dark.svg?color_snake=#ffb86c&color_dots=#161b22,#21262d,#30363d,#484f58,#6e7681
+            # Bản sáng: Dải màu xanh lá cây Pastel (dịu mắt, không bị rực)
+            dist/github-contribution-grid-snake.svg?color_snake=#1da1f2&color_dots=#f0f2f5,#c6e48b,#7bc96f,#239a3b,#196127
+            # Bản tối: Dải màu Xám xanh hiện đại (kiểu giao diện VS Code)
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#e99149&color_dots=#161b22,#2d333b,#404c5a,#768390,#adbac7
 
       - name: Deploy to output branch
         uses: peaceiris/actions-gh-pages@v4
