@@ -2,7 +2,7 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 17 * * 6"
+    - cron: "0 0 * * 0"
   workflow_dispatch:
   push:
     branches:
@@ -12,9 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     permissions:
       contents: write
@@ -28,8 +25,10 @@ jobs:
         with:
           github_user_name: an0other
           outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=FF0000&color_dots=#ffffff,#a8e6a3,#5cd65c,#2eb82e,#145214
-            dist/github-contribution-grid-snake-dark.svg?color_snake=00FFFF&color_dots=#000000,#0f5132,#198754,#20c997,#7fffd4
+            # Bản sáng: Rắn xanh dương, các ô màu xanh băng dịu
+            dist/github-contribution-grid-snake.svg?color_snake=#3c7dd9&color_dots=#ebedf0,#c0e2f8,#81c1ea,#41a0dc,#076196
+            # Bản tối: Rắn vàng hổ phách, các ô màu xám than tối giản
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#ffb86c&color_dots=#161b22,#21262d,#30363d,#484f58,#6e7681
 
       - name: Deploy to output branch
         uses: peaceiris/actions-gh-pages@v4
